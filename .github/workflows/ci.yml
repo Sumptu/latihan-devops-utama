@@ -1,0 +1,12 @@
+name: Validasi Infrastruktur
+on: [push]
+
+jobs:
+  uji-kode:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tarik Kode dari Repositori
+        uses: actions/checkout@v3
+
+      - name: Uji Sintaks Docker Compose
+        run: docker compose config
