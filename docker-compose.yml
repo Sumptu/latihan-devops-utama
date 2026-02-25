@@ -1,0 +1,11 @@
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"  # Memetakan port 8080 di host ke port 80 di kontainer Nginx
+    volumes:
+      - ./html:/usr/share/nginx/html  # Menyediakan file HTML lokal ke dalam kontainer
+
+  cache:
+    image: redis:alpine
+
