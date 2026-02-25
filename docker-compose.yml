@@ -1,6 +1,6 @@
 services:
   web:
-    image: nginx:alpine
+  image: nginx:alpine
     ports:
       - "8080:80"  # Memetakan port 8080 di host ke port 80 di kontainer Nginx
     volumes:
